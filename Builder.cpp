@@ -1,4 +1,17 @@
-#include <iostream>
+/**
+ * @file Builder.cpp
+ * @brief Implementation of the Builder Creational Pattern.
+ * * @details Separates the construction of a complex object from its representation. 
+ * This allows for a step-by-step construction process, which is critical in 
+ * Mission-Critical systems to ensure all safety parameters are initialized 
+ * correctly before the object is used.
+ * * @design Highly recommended for initializing complex Hardware Peripheral 
+ * configurations (e.g., initializing a multi-channel DMA controller).
+ * @author Sergey Petrov
+ * @date 2024-06-01
+*/
+
+ #include <iostream>
 #include <string>
 
 using namespace std;   

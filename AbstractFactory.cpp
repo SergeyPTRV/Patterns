@@ -1,4 +1,17 @@
-#include <iostream>
+/**
+ * @file AbstractFactory.cpp
+ * @brief Implementation of the Abstract Factory Creational Pattern.
+ * * @details This pattern provides an interface for creating families of related 
+ * objects without specifying their concrete classes. In embedded systems, 
+ * this is frequently used to switch between different hardware abstractions 
+ * (e.g., Simulation vs. Production Hardware) at runtime.
+ * * @note Level: Senior Architecture
+ * @author Sergey Petrov
+ * @date 2024-06-01
+ */
+
+
+ #include <iostream>
 
 using namespace std;
 

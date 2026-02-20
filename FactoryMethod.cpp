@@ -1,4 +1,16 @@
-#include <iostream>
+/**
+ * @file FactoryMethod.cpp
+ * @brief Implementation of the Factory Method Pattern.
+ * * @details Defines an interface for creating an object but lets subclasses 
+ * decide which class to instantiate. This is used in 'System Bring-up' 
+ * scenarios where the software detects the Board ID and instantiates 
+ * the appropriate Driver set.
+ * * @standard Follows SOLID principles (Open/Closed Principle).
+ * @author Sergey Petrov
+ * @date 2024-06-01
+*/
+
+ #include <iostream>
 
 using namespace std;
 
