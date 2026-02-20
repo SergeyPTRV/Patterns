@@ -8,7 +8,7 @@
  * * @design Highly recommended for initializing complex Hardware Peripheral 
  * configurations (e.g., initializing a multi-channel DMA controller).
  * @author Sergey Petrov
- * @date 2024-06-01
+ * @date 2026-02-02
 */
 
  #include <iostream>
