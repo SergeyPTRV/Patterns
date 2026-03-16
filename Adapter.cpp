@@ -14,52 +14,64 @@
 using namespace std;
 
 // LengthAdapter interface expected by the client
-class LengthAdapter {
+class LengthAdapter 
+{
 public:
     virtual float* getLength() = 0; // Pure virtual method to get length, which will be implemented by concrete adapters
     virtual ~LengthAdapter() {} // Virtual destructor for proper cleanup
 };
 
 // Adaptee class with an incompatible interface
-class EuroLength : public LengthAdapter {
+class EuroLength : public LengthAdapter 
+{
     float* lengthInMeters;  // Length in meters, which is the expected format for EuroLength
 public:
     EuroLength(float* meters) : lengthInMeters(meters) {}   // Constructor to initialize length in meters
-    float* getLength() override {   // Return length in meters, which is the expected format for EuroLength
+    float* getLength() override 
+    {   // Return length in meters, which is the expected format for EuroLength
         return lengthInMeters;  // Return length in meters, which is the expected format for EuroLength
     }
-    ~EuroLength() { // Clean up length in meters
+    ~EuroLength() 
+    { // Clean up length in meters
         delete lengthInMeters;  // Clean up length in meters
     }
 };
 
 // Adaptee class with an incompatible interface
-class USLength{
+class USLength
+{
     float* curentLength;    // Length in meters, will be converted to feet by adapter
 public:
     USLength(float* meters) : curentLength(meters) {}   // Constructor to initialize length in meters
-    float* getLength(){ // Return length in meters, will be converted by adapter
+    float* getLength()
+    { // Return length in meters, will be converted by adapter
         return curentLength;  // Return length in meters, will be converted by adapter
     }
-    ~USLength() {
+    ~USLength() 
+    {
         delete curentLength;    // Clean up length in meters
     }
 };
 
 // Adapter class that converts EuroLength to USLength
-class LengthAdapterUS : public LengthAdapter {
+class LengthAdapterUS : public LengthAdapter 
+{
     USLength* usLength;     // Adaptee
     float* lengthInFeet;    // Converted length in feet
 public:
-    LengthAdapterUS(USLength* usLength) : usLength(usLength), lengthInFeet(nullptr) {
+    LengthAdapterUS(USLength* usLength) : usLength(usLength), lengthInFeet(nullptr) 
+    {   // Constructor to initialize USLength and set lengthInFeet to nullptr
+        lengthInFeet = new float(0.0); // Initialize length in feet to 0.0
 
     }
-    float* getLength() override {   // Convert length from meters to feet
+    float* getLength() override 
+    {   // Convert length from meters to feet
         lengthInFeet = usLength->getLength();   // Get length in meters from USLength
         *lengthInFeet = (*lengthInFeet) * 3.28084; // Convert meters to feet
         return lengthInFeet;    // Return length in feet
     }
-    ~LengthAdapterUS() {
+    ~LengthAdapterUS() 
+    {   // Clean up resources
         delete usLength;    // Clean up USLength
         delete lengthInFeet; // Clean up converted length in feet
     }
@@ -67,7 +79,7 @@ public:
 
 int main() 
 {
-    float lengthInMeters = 3.0; // 1 meter
+    float lengthInMeters = 3.0; // meter
 
     LengthAdapter* euroLength = new EuroLength(&lengthInMeters);    // Create an instance of EuroLength with length in meters
     LengthAdapter* usLength = new LengthAdapterUS(new USLength(&lengthInMeters));   // Create an instance of LengthAdapterUS with a new USLength that has length in meters

@@ -13,6 +13,9 @@ This repository contains high-quality implementations of common software design 
 * `AbstractFactory.cpp`
 * `Builder.cpp`
 * `FactoryMethod.cpp`
+* `Adapter.cpp`
+* `Prototype.cpp`
+* `Singleton.cpp`
 
 ## 🛠 Future Updates
 This is an ongoing project. I will be adding more patterns in the future, including Structural and Behavioral patterns (e.g., Singleton, Observer, Strategy).
