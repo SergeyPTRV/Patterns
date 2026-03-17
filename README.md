@@ -18,6 +18,8 @@ This repository contains high-quality implementations of common software design 
 * `Singleton.cpp`
 * `Bridge.cpp`
 * `Composite.cpp`
+* `Decorator.cpp`
+* `Facade.cpp`
 
 
 ## 🛠 Future Updates
