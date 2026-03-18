@@ -20,6 +20,8 @@ This repository contains high-quality implementations of common software design 
 * `Composite.cpp`
 * `Decorator.cpp`
 * `Facade.cpp`
+* `Flyweight.cpp`
+* `Proxy.cpp`
 
 
 ## 🛠 Future Updates
