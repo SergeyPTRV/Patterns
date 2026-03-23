@@ -22,6 +22,8 @@ This repository contains high-quality implementations of common software design 
 * `Facade.cpp`
 * `Flyweight.cpp`
 * `Proxy.cpp`
+* `ChainOfResponsibility.cpp`
+* `Command.cpp`
 
 
 ## 🛠 Future Updates
