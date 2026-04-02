@@ -1,4 +1,5 @@
 /.vscode
+/Iterator.dSYM
 /AF
 /Builder
 /FactoryMetod
@@ -13,3 +14,4 @@
 /Proxy
 /CHOR
 /Command
+/Iterator

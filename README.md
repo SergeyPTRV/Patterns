@@ -24,6 +24,7 @@ This repository contains high-quality implementations of common software design 
 * `Proxy.cpp`
 * `ChainOfResponsibility.cpp`
 * `Command.cpp`
+* `Iterator.cpp`
 
 
 ## 🛠 Future Updates
