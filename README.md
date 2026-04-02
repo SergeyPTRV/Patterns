@@ -25,6 +25,7 @@ This repository contains high-quality implementations of common software design 
 * `ChainOfResponsibility.cpp`
 * `Command.cpp`
 * `Iterator.cpp`
+* `Mediator.cpp`
 
 
 ## 🛠 Future Updates
